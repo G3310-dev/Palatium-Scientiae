@@ -1,0 +1,14 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    /* box-sizing: border-box; */
+}
+
+body {
+    background-image: url('/Palatium-Scientiae-main/Assets/Images/WhatsApp\ Image\ 2024-07-11\ at\ 20.16.15.jpeg');
+    background-size: cover;
+    background-color: rgba(255, 255, 255, 0.402);
+    background-blend-mode: lighten;
+}

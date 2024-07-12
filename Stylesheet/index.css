@@ -1,0 +1,118 @@
+@import url('./main.css');
+
+.background {
+    width: 100%;
+    height: 98vh;
+    object-fit: cover;
+    opacity: 0.5;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    height: 120px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.logo img{
+    width: 77px;
+    height: 77px;
+    margin: 30px 0 0 20px;
+}
+
+.navmenu {
+    width: 90%;
+    margin: 35px 0 0 0;
+    display: flex;
+}
+
+.navpress {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 250px;
+    margin-top: 10px;
+}
+
+.navpress a{
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: 800;
+    color: #050C9C;
+    /* margin: 50px; */
+}
+
+.account{
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.account a{
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.signin {
+    color: #050C9C;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 30px;
+    padding: 5px 23px 5px 23px;
+}
+
+.signup {
+    background-color: #050C9C;
+    border-color: #050C9C;
+    color: white;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 30px;
+    padding: 5px 23px 5px 23px;
+}
+
+.line {
+    border: 5px solid gray;
+}
+
+.body {
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.text {
+    padding: 20px;
+}
+
+.text h1 {
+    font-weight: 800;
+    color: #050C9C;
+    font-size: 60px;
+    
+}
+
+.text p{
+    width: 600px;
+    margin: 10px;
+}
+
+.gets {
+    color: white;
+    background-color: #050C9C;
+    border-radius: 25px;
+    text-decoration: none;
+    padding: 5px 10px 5px 10px;
+}
+
+.body img {
+    width: 50%;
+    height: 500px;
+    border-radius: 25px;
+}
