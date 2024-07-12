@@ -2,7 +2,8 @@
     padding: 0;
     margin: 0;
     font-family: "Inter", sans-serif;
-    /* box-sizing: border-box; */
+    cursor: default;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -10,18 +11,11 @@ body {
     background-size: cover;
     background-color: rgba(255, 255, 255, 0.402);
     background-blend-mode: lighten;
+    overflow: hidden;
 }
 
 
 a {
-    text-decoration: none;
-}
-
-body {
-    overflow: hidden;
-}
-
-a{
     text-decoration: none;
 }
 
@@ -54,7 +48,7 @@ nav {
 .logo img {
     width: 77px;
     height: 77px;
-    margin: 30px 0 0 20px;
+    margin: 30px 0 0 25px;
 }
 
 .navmenu {
@@ -75,7 +69,6 @@ nav {
     font-size: 24px;
     font-weight: 800;
     color: #050C9C;
-    /* margin: 50px; */
 }
 
 .account {
@@ -88,7 +81,7 @@ nav {
 
 .account a {
     text-decoration: none;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 800;
 }
 
@@ -100,7 +93,7 @@ nav {
     padding: 5px 23px 5px 23px;
 }
 
-.signin a{
+.signin a {
     color: #050C9C;
 }
 
@@ -114,7 +107,7 @@ nav {
     padding: 5px 23px 5px 23px;
 }
 
-.signup a{
+.signup a {
     color: white;
 }
 

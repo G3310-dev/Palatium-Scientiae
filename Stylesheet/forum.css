@@ -1,0 +1,53 @@
+@import url("/Stylesheet/index.css");
+@import url("/Stylesheet/course.css");
+@import url("/Stylesheet/logui.css");
+
+.forum {
+    width: 100%;
+    height: 300px;
+    background-image: url("/Assets/Images/WhatsApp\ Image\ 2024-07-12\ at\ 22.19.37.jpeg");
+    color: white;
+}
+.back_hover{
+    width: 100vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+}
+
+.banner_course {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner_course h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.banner_course p {
+    margin-bottom: 35px;
+}
+
+.hover {
+    width: 23%;
+    height: 60%;
+    left: 0;
+    right: 0;
+    top: 20%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    border: 3px solid #858585;
+    border-radius: 30px;
+    background-color: white;
+    margin: 0% auto 0 auto;
+}

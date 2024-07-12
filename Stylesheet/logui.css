@@ -1,1 +1,79 @@
 @import url("/Stylesheet/index.css");
+@import url("/Stylesheet/course.css");
+
+.sign {
+    width: 23%;
+    height: 60%;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    border: 3px solid #858585;
+    border-radius: 30px;
+    background-color: white;
+    margin: 4% auto 0 auto;
+}
+
+.sign h3 {
+    font-size: 27px;
+    color: #050C9C;
+    font-weight: 900;
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form input {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 2px solid #858585;
+    border-radius: 100px;
+}
+
+.log {
+    width: 60%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    background-color: #050C9C;
+    border-color: #050C9C;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 100px;
+    padding: 5px 23px 5px 23px;
+    font-weight: 800;
+}
+
+.log p {
+    color: white;
+}
+
+.log2 {
+    width: 60%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+    border-color: #858585;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 15px;
+    padding: 5px 23px 5px 23px;
+    font-weight: 800;
+}
+
+a{
+    color: #858585;
+}
+
+p{
+    color: #858585;
+}
