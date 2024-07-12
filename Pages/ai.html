@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Stylesheet/course.css">
+    <link rel="stylesheet" href="/Stylesheet/ai.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <title>Palatium Scientiae</title>
 </head>
 
@@ -17,8 +18,8 @@
         <div class="navmenu">
             <div class="navpress">
                 <a href="/Pages/forum.html">Forum</a>
-                <a href="#">Course</a>
-                <a href="/Pages/ai.html">Ask AI?</a>
+                <a href="/Pages/course.html">Course</a>
+                <a href="">Ask AI?</a>
             </div>
             <div class="account">
                 <div class="signin">
@@ -30,52 +31,35 @@
             </div>
         </div>
     </nav>
-    <div class="course">
-        <div class="banner_course">
-            <h1>Welcome! Let's start learning!</h1>
-            <p>"Education is the passport to the future, for tomorrow belongs to those who prepare for it today." -
-                Malcolm X</p>
-            <div class="learn">
-                <a href="#scrool">Start Learning!</a>
-            </div>
+    <hr>
+
+    <div class="bot_container">
+        <div class="bot_title">
+            <h2>AskAI</h2>
+            <p>Empowered by OpenAI</p>
         </div>
-        <div class="class">
-            <div class="room" id="valid"">
-                <img src="/Assets/Images/room.jpeg" alt="">
-                <h3>Bussiness Course #1</h3>
-                <p>Unlock your potential and sharpen your business acumen with our comprehensive Business Course. Gain essential skills, insights, and strategies to thrive in today's competitive marketplace.</p>
-                <div class="status">
-                    <p>Status: Available</p>
-                    <img src="/Assets/Icons/on.jpeg" alt="">
-                </div>
+        <div class="bot_box">
+            <div class="bot">
+                <img src="/Assets/Icons/AP.png" alt="">
+                <p class="bot">Hi!! What do you want to learn today?</p>
             </div>
-            <div class="sized"></div>
-            <div class="room">
-                <img src="/Assets/Images/room.jpeg" alt="">
-                <h3>Bussiness Course #2</h3>
-                <p>Unlock your potential and sharpen your business acumen with our comprehensive Business Course. Gain essential skills,
-                    insights, and strategies to thrive in today's competitive marketplace.</p>
-                <div class="status">
-                    <p>Status: Not Available</p>
-                    <img src="/Assets/Icons/off.jpeg" alt="">
-                </div>
-            </div>
-            <div class="sized"></div>
-            <div class="room">
-                <img src="/Assets/Images/room.jpeg" alt="">
-                <h3>Bussiness Course #3</h3>
-                <p>Unlock your potential and sharpen your business acumen with our comprehensive Business Course. Gain essential skills,
-                    insights, and strategies to thrive in today's competitive marketplace.</p>
-                <div class="status">
-                    <p>Status: Not Available</p>
-                    <img src="/Assets/Icons/off.jpeg" alt="">
-                </div>
-            </div>
+            
         </div>
-        <br id="scrool"><br>
+        
+        <div class="input_wrap">
+            <input type="text" placeholder="What do you want to ask?">
+            <button>
+                <span class="material-symbols-outlined">
+                    send
+                </span>
+            </button>
+        </div>
     </div>
 </body>
+
 <script type="module">
+    // Import the functions you need from the SDKs you need
+
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
     import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-analytics.js";
     import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
@@ -96,16 +80,12 @@
 
     const app = initializeApp(firebaseConfig);
     const analytics = getAnalytics(app);
-    const button = document.getElementById("valid")
 
     const auth = getAuth();
     onAuthStateChanged(auth, (user) => {
         if (user) {
             // User is signed in, see docs for a list of available properties
             // https://firebase.google.com/docs/reference/js/auth.user
-            button.addEventListener('click', (e) => {
-                window.location = "./detailedCourse.html"
-            })
             const uid = user.uid;
             console.log("aman");
             document.getElementsByClassName("account")[0].style.display = "none";
@@ -114,5 +94,6 @@
         }
     });
 </script>
+<script src="/Javascript/gpt.js"></script>
 
 </html>

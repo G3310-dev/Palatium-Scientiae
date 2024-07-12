@@ -8,14 +8,29 @@
     background-image: url("/Assets/Images/WhatsApp\ Image\ 2024-07-12\ at\ 22.19.37.jpeg");
     color: white;
 }
-.back_hover{
-    width: 100vh;
-    position: absolute;
-    display: flex;
+
+.desc-control {
+    height: 200px;
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 2px solid #858585;
+    border-radius: 20px;
+}
+
+
+.back_hover {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: black;
+    background: rgba(0, 0, 0, 0.637);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(5px);
 }
 
 .banner_course {
@@ -33,6 +48,8 @@
 
 .banner_course p {
     margin-bottom: 35px;
+    color: white;
+    font-weight: bold;
 }
 
 .hover {
@@ -41,7 +58,7 @@
     left: 0;
     right: 0;
     top: 20%;
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -50,4 +67,79 @@
     border-radius: 30px;
     background-color: white;
     margin: 0% auto 0 auto;
+}
+
+.hover h3 {
+    font-weight: 900;
+    color: #050C9C;
+    font-size: 23px;
+}
+
+.disc {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin-left: 17%;
+}
+
+.profile {
+    display: flex;
+    margin-top: 80px;
+    margin-left: 30px;
+    flex-direction: row;
+}
+
+.profile p {
+    font-size: 20px;
+    margin: 5px 0 0 7px;
+    font-weight: bold;
+    color: #050C9C;
+}
+
+.profile img {
+    width: 33px;
+}
+
+.desc h2 {
+    color: #585858;
+}
+
+.join {
+    width: 170px;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    background-color: #424242;
+    border-color: #424242;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 30px;
+    padding: 5px 23px 5px 23px;
+    font-weight: 800;
+}
+
+.create {
+    width: 200px;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    background-color: #050C9C;
+    border-color: #050C9C;
+    border-style: solid;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    border-width: 5px;
+    border-radius: 30px;
+    padding: 5px 23px 5px 23px;
+    font-weight: 800;
+}
+
+.create a {
+    color: white;
+}
+
+.join a {
+    color: white;
 }

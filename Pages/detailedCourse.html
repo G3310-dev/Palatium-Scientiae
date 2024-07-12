@@ -17,7 +17,7 @@
         <div class="navmenu">
             <div class="navpress">
                 <a href="/Pages/forum.html">Forum</a>
-                <a href="#">Course</a>
+                <a href="/Pages/course.html">Course</a>
                 <a href="/Pages/ai.html">Ask AI?</a>
             </div>
             <div class="account">
@@ -30,49 +30,43 @@
             </div>
         </div>
     </nav>
-    <div class="course">
-        <div class="banner_course">
-            <h1>Welcome! Let's start learning!</h1>
-            <p>"Education is the passport to the future, for tomorrow belongs to those who prepare for it today." -
-                Malcolm X</p>
-            <div class="learn">
-                <a href="#scrool">Start Learning!</a>
-            </div>
+    <hr>
+    <div class="content">
+        <div class="video">
+            <iframe width="60%" height="500px" src="https://www.youtube.com/embed/3_R14_eFCOg?si=kVVSm4EpgeFwQCZI"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
-        <div class="class">
-            <div class="room" id="valid"">
-                <img src="/Assets/Images/room.jpeg" alt="">
-                <h3>Bussiness Course #1</h3>
-                <p>Unlock your potential and sharpen your business acumen with our comprehensive Business Course. Gain essential skills, insights, and strategies to thrive in today's competitive marketplace.</p>
-                <div class="status">
-                    <p>Status: Available</p>
-                    <img src="/Assets/Icons/on.jpeg" alt="">
-                </div>
-            </div>
-            <div class="sized"></div>
-            <div class="room">
-                <img src="/Assets/Images/room.jpeg" alt="">
-                <h3>Bussiness Course #2</h3>
-                <p>Unlock your potential and sharpen your business acumen with our comprehensive Business Course. Gain essential skills,
-                    insights, and strategies to thrive in today's competitive marketplace.</p>
-                <div class="status">
-                    <p>Status: Not Available</p>
-                    <img src="/Assets/Icons/off.jpeg" alt="">
-                </div>
-            </div>
-            <div class="sized"></div>
-            <div class="room">
-                <img src="/Assets/Images/room.jpeg" alt="">
-                <h3>Bussiness Course #3</h3>
-                <p>Unlock your potential and sharpen your business acumen with our comprehensive Business Course. Gain essential skills,
-                    insights, and strategies to thrive in today's competitive marketplace.</p>
-                <div class="status">
-                    <p>Status: Not Available</p>
-                    <img src="/Assets/Icons/off.jpeg" alt="">
-                </div>
-            </div>
-        </div>
-        <br id="scrool"><br>
+        <h2>Entry to bussiness!!</h2>
+        <p>Creating a successful business involves several crucial steps that, when executed well, can significantly
+            increase your
+            chances of success. The first step is to identify a market need. Conduct thorough research to uncover gaps
+            or problems
+            in the market that your business can address. Understanding your target audience and their needs is
+            essential for
+            developing a product or service that meets their expectations and solves their problems.
+            <br><br>
+            Once you have identified a market need, creating a solid business plan is vital. This plan should outline
+            your business
+            goals, target market, competition, marketing strategy, financial projections, and operational plan. A
+            well-thought-out
+            business plan serves as a roadmap for your business, guiding your decisions and helping you stay focused. It
+            is also
+            crucial for attracting investors and securing funding.
+            <br><br>
+            Building a strong team is another key component of a successful business. Assemble a group of skilled and
+            motivated
+            individuals who complement your strengths and weaknesses. A cohesive team can drive innovation, efficiency,
+            and
+            productivity. Invest in your team’s development and create a positive work environment to retain top talent.
+            <br><br>
+            Customer experience should always be a top priority. Providing excellent customer service and building
+            strong
+            relationships with your customers can lead to repeat business and referrals. Satisfied customers are more
+            likely to
+            become loyal advocates for your brand, which can significantly boost your reputation and sales.
+        </p>
     </div>
 </body>
 <script type="module">
@@ -96,16 +90,12 @@
 
     const app = initializeApp(firebaseConfig);
     const analytics = getAnalytics(app);
-    const button = document.getElementById("valid")
 
     const auth = getAuth();
     onAuthStateChanged(auth, (user) => {
         if (user) {
             // User is signed in, see docs for a list of available properties
             // https://firebase.google.com/docs/reference/js/auth.user
-            button.addEventListener('click', (e) => {
-                window.location = "./detailedCourse.html"
-            })
             const uid = user.uid;
             console.log("aman");
             document.getElementsByClassName("account")[0].style.display = "none";
