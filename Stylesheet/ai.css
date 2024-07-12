@@ -1,0 +1,102 @@
+@import url("/Stylesheet/index.css");
+
+.bot_container {
+    margin-top: 1%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 55%;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2.5px solid #5E5E5E;
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+}
+
+.bot_container {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bot_title {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h2 {
+    color: #050C9C;
+    font-size: 30px;
+}
+
+p {
+    color: #5F5F5F;
+    font-weight: bold;
+}
+
+input {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 2px solid #858585;
+    border-radius: 25px;
+}
+
+.bot_box{
+    height: 65%;
+    width: 91%;
+    padding-top: 40px;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: left;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.input_wrap{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.bot_box>div{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.input_wrap button{
+    margin-left: 10px;
+    background: none;
+    border: none;
+}
+
+.bot_box img{
+    width: 33px;
+}
+
+.user img{
+    opacity: 0%;
+    width: 33px;
+}
+
+.bot_box p{
+    font-size: 20px;
+    margin: 5px 0 0 7px;
+    color: #050C9C;
+}
+
+.user p {
+    font-size: 20px;
+    margin: 5px 0 0 7px;
+    color: #5E5E5E;
+}
+

@@ -16,9 +16,9 @@
 
         <div class="navmenu">
             <div class="navpress">
-                <a href="">Forum</a>
-                <a href="">Course</a>
-                <a href="">Ask AI?</a>
+                <a href="#">Forum</a>
+                <a href="/Pages/course.html">Course</a>
+                <a href="/Pages/ai.html">Ask AI?</a>
             </div>
             <div class="account">
                 <div class="signin">
@@ -38,41 +38,105 @@
                 <a href="#scrool">Start Discussing!</a>
             </div>
         </div>
+        <div class="disc">
+            <div class="profile">
+                <img src="/Assets/Icons/AP.png" alt="">
+                <p class="bot">User123</p>
+            </div>
+            <div class="desc">
+                <h2>How could I improve my skills on bussiness?</h2>
+                <p>Seeking advice and resources to enhance my understanding of business strategies, management techniques, and industry
+                trends. Looking forward to valuable insights and discussions to propel my business forward!</p>
+                <div class="join">
+                    <a>Join discussion</a>
+                </div>
+            </div>
+        </div>
+        <div class="disc">
+            <div class="profile">
+                <img src="/Assets/Icons/AP.png" alt="">
+                <p class="bot">User123</p>
+            </div>
+            <div class="desc">
+                <h2>How could I improve my skills on bussiness?</h2>
+                <p>Seeking advice and resources to enhance my understanding of business strategies, management techniques, and
+                    industry
+                    trends. Looking forward to valuable insights and discussions to propel my business forward!</p>
+                <div class="join">
+                    <a>Join discussion</a>
+                </div>
+            </div>
+        </div>
+        <div class="disc">
+            <div class="profile">
+                <img src="/Assets/Icons/AP.png" alt="">
+                <p class="bot">User123</p>
+            </div>
+            <div class="desc">
+                <h2>How could I improve my skills on bussiness?</h2>
+                <p>Seeking advice and resources to enhance my understanding of business strategies, management techniques, and
+                    industry
+                    trends. Looking forward to valuable insights and discussions to propel my business forward!</p>
+                <div class="join">
+                    <a>Join discussion</a>
+                </div>
+            </div>
+        </div>
+        <div class="disc">
+            <div class="profile">
+                <img src="/Assets/Icons/AP.png" alt="">
+                <p class="bot">User123</p>
+            </div>
+            <div class="desc">
+                <h2>How could I improve my skills on bussiness?</h2>
+                <p>Seeking advice and resources to enhance my understanding of business strategies, management techniques, and
+                    industry
+                    trends. Looking forward to valuable insights and discussions to propel my business forward!</p>
+                <div class="join">
+                    <a>Join discussion</a>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 
-<div class="back_hover">
+<div class="create">
+    <a>++ Create new discussion</a>
+</div>
+
+<!-- <div class="back_hover">
     <div class="hover">
-        <h3>Ask anything!!</h3>
+        <h3>Let's discuss your problem!</h3>
         <br>
         <div class="form">
-            <input type="text" id="email" class="form-control" placeholder="Enter your email">
+            <input autocomplete="off" type="text" id="title" class="form-control"
+                placeholder="What do you want to discuss?">
         </div>
         <div class="form">
-            <input type="password" id="password" class="form-control" placeholder="Enter your password">
+            <textarea type="text" id="desc" class="desc-control" placeholder="Enter your password"></textarea>
         </div>
-        <div class="form">
-            <input type="password" id="password1" class="form-control" placeholder="Confirm your password">
-        </div>
-        <div class="log" id="logup">
-            <p>Sign Up</p>
-        </div>
-        <br>
-        <p>OR</p>
-        <div class="log2" id="login">
-            <a href="/Pages/login.html">Already have an account?</a>
+        <div class="log" id="submit">
+            <p>Upload Question</p>
         </div>
     </div>
-</div>
+</div> -->
+
 <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+    import { getFirestore, setDoc, addDoc, doc, collection } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js";
     import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-analytics.js";
+    // Required for side-effects
+    // import { collection, addDoc } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js";
     import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
     // TODO: Add SDKs for Firebase products that you want to use
     // https://firebase.google.com/docs/web/setup#available-libraries
 
     // Your web app's Firebase configuration
     // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
+
+    let button = document.getElementById("submit");
+
     const firebaseConfig = {
         apiKey: "AIzaSyATxutEXJCk_uejXhQ3hyAXfg3UkWe5in8",
         authDomain: "palatiumscientiae.firebaseapp.com",
@@ -86,18 +150,37 @@
     const app = initializeApp(firebaseConfig);
     const analytics = getAnalytics(app);
 
+    const db = getFirestore(app);
     const auth = getAuth();
+
     onAuthStateChanged(auth, (user) => {
         if (user) {
             // User is signed in, see docs for a list of available properties
             // https://firebase.google.com/docs/reference/js/auth.user
             const uid = user.uid;
             console.log("aman");
+
+
             document.getElementsByClassName("account")[0].style.display = "none";
             document.getElementsByClassName("navpress")[0].style.width = "100vh";
+
+            button.addEventListener('click', (e) => {
+                var title = document.getElementById("title").value;
+                var desc = document.getElementById("desc").value;
+
+                addDoc(collection(db, "Forums"), {
+                    email: user.email,
+                    title: title,
+                    description: desc,
+                });
+                alert("hello");
+            })
             // ...
         }
     });
+
+
+
 </script>
 
 </html>
