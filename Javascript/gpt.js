@@ -16,7 +16,7 @@ sendBtn.onclick = function () {
         let response = 
         `<div class="bot">
                 <img src="/Assets/Icons/AP.png" alt="">
-                <p class="bot">Oops!! Something went wrong (this is just a prototype)</p>
+                <p class="bot">Oops!! Something went wrong</p>
             </div>`
         messageBox.insertAdjacentHTML("beforeend", message)
 
