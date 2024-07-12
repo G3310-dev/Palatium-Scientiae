@@ -1,10 +1,43 @@
-@import url('./main.css');
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    /* box-sizing: border-box; */
+}
+
+body {
+    background-image: url('/Assets/Images/WhatsApp\ Image\ 2024-07-11\ at\ 20.16.15.jpeg');
+    background-size: cover;
+    background-color: rgba(255, 255, 255, 0.402);
+    background-blend-mode: lighten;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+body {
+    overflow: hidden;
+}
+
+a{
+    text-decoration: none;
+}
 
 .background {
     width: 100%;
     height: 98vh;
     object-fit: cover;
     opacity: 0.5;
+}
+
+hr {
+    width: 95%;
+    border: 3px solid #D9D9D9;
+    border-radius: 50px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 nav {
@@ -18,44 +51,44 @@ nav {
     justify-content: space-between;
 }
 
-.logo img{
+.logo img {
     width: 77px;
     height: 77px;
     margin: 30px 0 0 20px;
 }
 
 .navmenu {
-    width: 90%;
+    width: max-content;
     margin: 35px 0 0 0;
     display: flex;
 }
 
 .navpress {
-    width: 50%;
+    width: 90%;
     display: flex;
     justify-content: space-evenly;
-    margin-left: 250px;
+    /* margin-left: 15%; */
     margin-top: 10px;
 }
 
-.navpress a{
-    text-decoration: none;
-    font-size: 28px;
+.navpress a {
+    font-size: 24px;
     font-weight: 800;
     color: #050C9C;
     /* margin: 50px; */
 }
 
-.account{
-    width: 25%;
+.account {
+    margin: 0 10% 0 7%;
+    width: 80vh;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
 }
 
-.account a{
+.account a {
     text-decoration: none;
-    font-size: 28px;
+    font-size: 25px;
     font-weight: 800;
 }
 
@@ -65,6 +98,10 @@ nav {
     border-width: 5px;
     border-radius: 30px;
     padding: 5px 23px 5px 23px;
+}
+
+.signin a{
+    color: #050C9C;
 }
 
 .signup {
@@ -77,42 +114,53 @@ nav {
     padding: 5px 23px 5px 23px;
 }
 
-.line {
-    border: 5px solid gray;
+.signup a{
+    color: white;
 }
 
-.body {
+.content {
     display: flex;
-    padding: 10px;
     justify-content: space-between;
+    margin-top: 9%;
 }
 
-.text {
-    padding: 20px;
+.desc {
+    padding: 30px 0 0 40px;
 }
 
-.text h1 {
+.desc h1 {
     font-weight: 800;
     color: #050C9C;
     font-size: 60px;
-    
+
 }
 
-.text p{
-    width: 600px;
-    margin: 10px;
+.desc p {
+    width: 60%;
+    margin: 10px 0 0 10px;
+    font-weight: bold;
+    color: #313131;
 }
 
 .gets {
-    color: white;
+    width: 170px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
     background-color: #050C9C;
-    border-radius: 25px;
-    text-decoration: none;
-    padding: 5px 10px 5px 10px;
+    border-color: #050C9C;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 30px;
+    padding: 5px 23px 5px 23px;
+    font-weight: 800;
 }
 
-.body img {
-    width: 50%;
-    height: 500px;
-    border-radius: 25px;
+.gets a {
+    color: white;
+    text-decoration: none;
+}
+
+.content img {
+    border-radius: 25px 0 0 25px;
 }
